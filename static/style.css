@@ -241,4 +241,23 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+} 
+
+.animate {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+/* When the animation is triggered, reset transformations */
+.animate.active {
+  opacity: 1;
+  transform: translateX(0);
 }
