@@ -10,15 +10,15 @@
 body,h1,h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 p {line-height: 2}
-.bgimg, .bgimg2, .bgimg3, .bgimg4 {
+.bgimg, .bgimg2, .bgimg3, .bgimg4  {
   min-height: 100%;
   background-position: center;
   background-size: cover;
 }
 
 .bgimg5 {
-  min-height: 90%;
-  background-position: right;
+  min-height: 100%;
+  background-position: center;
   background-size: auto 100% ; 
   background-repeat: no-repeat;
 }
@@ -79,46 +79,29 @@ p {line-height: 2}
 
 
 <!-- Background photo -->
-<div class="w3-display-container bgimg5 animate slide-left">
-  <div class="w3-display-left2 w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-text-grey">You Are Invited</h1><br>
-    <h2 class="w3-text-grey">Of course..</h2>
-  </div>
+<div class="w3-container bgimg5 animate slide-left">
 </div>
 
 
 <!-- Wedding information -->
 <div class="w3-content" style="max-width:1587px; position: relative;">
 
-    <div class="w3-container w3-padding-64 w3-white w3-center" id="wedding">
-      <div class="w3-content">
-        <h1 class="w3-text-grey"><b>WEDDING DETAILS</b></h1>
-        <img class="w3-round-large w3-grayscale-min" src="/static/wedding_venue.jpg" style="width:100%;margin:64px 0">
-        <div class="w3-row">
-          <div class="w3-half">
-            <h2>When</h2>
-            <p>Wedding Ceremony - 2:00pm</p>
-            <p>Reception & Dinner - 5:00pm</p>
-          </div>
-          <div class="w3-half">
-            <h2>Where</h2>
-            <p>Some place, an address</p>
-            <p>Some where, some address</p>
-          </div>
+    <div class="container">
+        <div class="links">
+            <ul>
+                <li data-content="bigDay" data-img-src="/static/pictures/manley_estate.jpg">The big day</li>
+                <li data-content="preWedding" data-img-src="/static/pictures/tester.jpg">The pre-wedding get-together</li>
+                <li data-content="goodbyes" data-img-src="/static/pictures/faces.jpg">Our goodbyes</li>
+            </ul>
         </div>
-        <div class="w3-row">
-          <div class="w3-half">
-            <h2>Night before braai</h2>
-            <p>Time of braai - 2:00pm</p>
-            <p>Location of braai - Somewhere</p>
-          </div>
-          <div class="w3-half">
-            <h2>Morning after breakfast</h2>
-            <p>Some time, a time</p>
-            <p>Some where, some address</p>
-          </div>
+        <div class="content">
+            <div class="image-crop-container">
+                <img id="contentImage" src="/static/pictures/manley_estate.jpg" alt="Venue Image">
+            </div>
+            <div id="eventDetails">
+                <!-- Dynamic content will be loaded here based on the clicked link -->
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- RSVP section -->
@@ -131,6 +114,7 @@ p {line-height: 2}
     </div>
 
 </div>
+
 
 
 <!-- Accommodation -->
@@ -193,6 +177,60 @@ p {line-height: 2}
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
 <!-- Add a script at the end of your HTML body -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.links li');
+    const eventDetails = document.getElementById('eventDetails');
+    const contentImage = document.getElementById('contentImage'); // Get the image element
+
+    // Define the content and associated image source for each event
+    const eventData = {
+        'preWedding': {
+            content: `
+                <h2>The pre-wedding get-together</h2>
+                <h3>Please join us for a lovely spit-braai as we get to know each other the night before our big day. Let’s acquaint with each other and get the vibes going ;)</h3>
+                <p>When - Friday 04 October 18:00</p>
+                <p>Location - Manley Estate lapa and pool area</p>
+                <p>What to bring - Own drinks (No cash bar on site)</p>
+            `,
+            imgSrc: '/static/pictures/tester.jpg'
+        },
+        'goodbyes': {
+            content: `
+                <h2>Our goodbyes</h2>
+                <h3>You are invited to join us for our first breakfast as the Myburghs!</h3>
+                <p>Note: breakfast is included for guests staying at Manley Estate. For guests staying elsewhere, breakfast is R190 per person.</p>
+                <p>Venue - Manley Wine Estate Restaurant</p>
+                <p>Time - 09:30</p>
+            `,
+            imgSrc: '/static/pictures/faces.jpg'
+        },
+        'bigDay': {
+            content: `
+                <h2>The big day</h2>
+                <p>Venue - Manley Wine Estate, Tulbagh</p>
+                <p>When - 14:30 for a 15:00 Start</p>
+            `,
+            imgSrc: '/static/pictures/manley_estate.jpg' // Assume you have a big day image
+        }
+    };
+
+    // Initialize with pre-wedding details and image
+    eventDetails.innerHTML = eventData['bigDay'].content;
+    contentImage.src = eventData['bigDay'].imgSrc;
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            const contentId = this.getAttribute('data-content');
+            eventDetails.innerHTML = eventData[contentId].content;
+            contentImage.src = eventData[contentId].imgSrc; // Update the image source based on the clicked link
+        });
+    });
+});
+
+</script>
+
 
 <script>
 var additionalFieldsAdded = false;
