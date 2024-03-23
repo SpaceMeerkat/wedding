@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Parisienne&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Parisienne&display=swap" rel="stylesheet">
 <style>
 body,h1,h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
@@ -16,15 +20,19 @@ p {line-height: 2}
   background-size: cover;
 }
 
-.bgimg5 {
-  min-height: 100%;
+
+.bgimg5, .bgimg6, .bgimg7 {
+  min-height: 90%;
   background-position: center;
   background-size: auto 100% ; 
   background-repeat: no-repeat;
 }
 
+
 .bgimg {background-image: url("/static/wedding_rings3.jpg")}
 .bgimg5 {background-image: url("/static/pictures/wide_shot.jpg")}
+.bgimg6 {background-image: url("/static/pictures/heart.jpg")}
+.bgimg7 {background-image: url("/static/pictures/laugh.jpg")}
 .bgimg3 {background-image: url("/static/housing.jpg")}
 .bgimg4 {background-image: url("/static/bridal.jpg")}
 
@@ -41,9 +49,9 @@ p {line-height: 2}
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">Melissa & Daylan</h1>
-    <h2>Are getting married</h2>
-    <h2><b>05.Oct.2024</b></h2>
+    <h1 class="parisienne-large">Melissa & Daylan</h1>
+    <h2 class='parisienne-regular' style='font-size:5vh'>Are getting married</h2>
+    <h2 class='parisienne-regular' style='font-size:3vh'><b>05.Oct.2024</b></h2>
   </div>
 </header>
 
@@ -56,7 +64,7 @@ p {line-height: 2}
     <a href="#rsvp" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">RSVP</a>
     <a href="#accommodation" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Accommodation</a>
     <a href="#information" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Other Information</a>
-    <a href="#bridal" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">The Bridal Party</a>
+    <a href="#team" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Meet The Team</a>
   </div>
 </div>
 
@@ -65,7 +73,7 @@ p {line-height: 2}
     <!-- About / Jane And John -->
     <div class="w3-container w3-padding-64 w3-white animate slide-right" id="us">
       <div class="w3-content">
-        <h1 class="w3-center w3-text-grey"><b>Our Story</b></h1>
+        <h1 class="w3-center parisienne-regular" style="padding-bottom:5vh"><b>Our Story</b></h1>
         <img class=" center" src="/static/pictures/our_story.jpg" style="width:60%;">
         <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -84,14 +92,16 @@ p {line-height: 2}
 
 
 <!-- Wedding information -->
-<div class="w3-content" style="max-width:1587px; position: relative;">
+<div class="w3-content animate slide-right" style="max-width:1587px; position: relative;" id="wedding">
 
-    <div class="container">
+    <h1 class="w3-center parisienne-regular" style="padding-top:15vh; padding-bottom:5vh"><b>Wedding Details</b></h1>
+
+    <div class="container" style="padding-bottom:5vh">
         <div class="links">
             <ul>
-                <li data-content="bigDay" data-img-src="/static/pictures/manley_estate.jpg">The big day</li>
-                <li data-content="preWedding" data-img-src="/static/pictures/tester.jpg">The pre-wedding get-together</li>
-                <li data-content="goodbyes" data-img-src="/static/pictures/faces.jpg">Our goodbyes</li>
+                <li class='tangerine-regular' data-content="bigDay">The big day</li>
+                <li class='tangerine-regular' data-content="preWedding">The pre-wedding get-together</li>
+                <li class='tangerine-regular' data-content="goodbyes">Our goodbyes</li>
             </ul>
         </div>
         <div class="content">
@@ -105,8 +115,8 @@ p {line-height: 2}
     </div>
 
     <!-- RSVP section -->
-    <div class="w3-container w3-padding-64 w3-white w3-center w3-wide" id="rsvp">
-      <h1>HOPE YOU CAN MAKE IT!</h1>
+    <div class="w3-container w3-white w3-center w3-wide" style="padding-bottom:15vh" id="rsvp">
+      <h2 class='parisienne-regular' style='font-size:5vh'>Hope You Can Make It!</h2>
       <p class="w3-large">Kindly Respond By ??, 2024</p>
       <p class="w3-xlarge">
         <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-amber w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
@@ -115,33 +125,65 @@ p {line-height: 2}
 
 </div>
 
+<!-- Background photo -->
+<div class="w3-container bgimg6 animate slide-left">
+</div>
 
 
 <!-- Accommodation -->
-<div class="w3-display-container bgimg3">
-  <div class="w3-display-right2 w3-text-white w3-center" id="accommodation">
-    <h1 class="w3-jumbo">Nearby Accommodation</h1><br>
-    <h2>Here are some details..</h2>
-  </div>
+<div class="w3-content animate slide-right" style="max-width:1587px; position: relative;" id="accommodation">
+
+    <h1 class="w3-center parisienne-regular" style="padding-top:15vh;"><b>Accommodation</b></h1>
+
+    <div class="container">
+        <div class="links">
+            <ul>
+                <de class='tangerine-regular' data-content="manley">Manley Wine Estate</de>
+                <de class='tangerine-regular' data-content="rijks">Rijk’s Wine Estate & Hotel</de>
+                <de class='tangerine-regular' data-content="villa">Villa Tarentaal</de>
+                <de class='tangerine-regular' data-content="mont">Mont Rouge Farm</de>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="image-crop-container">
+                <img id="contentImageDetails" src="/static/pictures/manley_estate.jpg" alt="Venue Image">
+            </div>
+            <div id="weddingDetails">
+                <!-- Dynamic content will be loaded here based on the clicked link -->
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Background photo -->
+<div class="w3-container bgimg7 animate slide-left">
 </div>
 
 <div class="w3-content" style="max-width:1587px; position: relative;">
 
     <!-- OTHER INFORMATION -->
-    <div class="w3-container w3-padding-64 w3-white w3-grayscale-min w3-center" id="information">
-      <div class="w3-content">
-        <h1 class="w3-text-grey"><b>OTHER INFORMATION</b></h1>
-      </div>
+    <div class="w3-container w3-padding-64 w3-white w3-grayscale-min w3-center animate slide-right" id="information">
+        <div class="w3-content">
+          <h1 class="parisienne-regular"><b>Other Information</b></h1>
+        </div>
+        <div class="extra-info-div">
+            Cash bar<br>
+            Dress code: Very much formal ;)<br>
+            Children: Due to limited space, we kindly invite only our nieces and nephews along; other than this our reception will be a date night to enjoy!<br>
+            Gifts: Your presence at our wedding is the greatest gift of all. However, should you wish to bless us with a gift, a box and table will be available.
+        </div>
     </div>
     
 </div>
 
 <!-- The Bridal Party -->
-<div class="w3-display-container bgimg4">
-  <div class="w3-display-left2 w3-text-white w3-center" id="bridal">
-    <h1 class="w3-jumbo">The Bridal Party</h1><br>
+<div class="w3-container w3-padding-64 w3-white w3-grayscale-min w3-center animate slide-right" id="team">
+    <div class="w3-content">
+      <h1 class="parisienne-regular"><b>Meet The Team</b></h1>
+    </div>
     <h2>Here are some details..</h2>
-  </div>
+    </div>
 </div>
     
     
@@ -188,8 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventData = {
         'preWedding': {
             content: `
-                <h2>The pre-wedding get-together</h2>
-                <h3>Please join us for a lovely spit-braai as we get to know each other the night before our big day. Let’s acquaint with each other and get the vibes going ;)</h3>
+                <h3 class='tangerine-small' style='padding-bottom:3vh'>Please join us for a lovely spit-braai as we get to know each other the night before our big day. Let’s acquaint with each other and get the vibes going ;)</h3>
                 <p>When - Friday 04 October 18:00</p>
                 <p>Location - Manley Estate lapa and pool area</p>
                 <p>What to bring - Own drinks (No cash bar on site)</p>
@@ -198,18 +239,16 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'goodbyes': {
             content: `
-                <h2>Our goodbyes</h2>
-                <h3>You are invited to join us for our first breakfast as the Myburghs!</h3>
-                <p>Note: breakfast is included for guests staying at Manley Estate. For guests staying elsewhere, breakfast is R190 per person.</p>
-                <p>Venue - Manley Wine Estate Restaurant</p>
+                <h3 class='tangerine-small' style='padding-bottom:3vh'>You are invited to join us for our first breakfast as the Myburghs!</h3>
+                <a href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate Restaurant</a>
                 <p>Time - 09:30</p>
+                <p style='font-size:1.5vh'>Note: breakfast is included for guests staying at Manley Estate. For guests staying elsewhere, breakfast is R190 per person.</p>
             `,
             imgSrc: '/static/pictures/faces.jpg'
         },
         'bigDay': {
             content: `
-                <h2>The big day</h2>
-                <p>Venue - Manley Wine Estate, Tulbagh</p>
+                <a href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate, Tulbagh</a>
                 <p>When - 14:30 for a 15:00 Start</p>
             `,
             imgSrc: '/static/pictures/manley_estate.jpg' // Assume you have a big day image
@@ -225,6 +264,59 @@ document.addEventListener('DOMContentLoaded', () => {
             const contentId = this.getAttribute('data-content');
             eventDetails.innerHTML = eventData[contentId].content;
             contentImage.src = eventData[contentId].imgSrc; // Update the image source based on the clicked link
+        });
+    });
+});
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dlinks = document.querySelectorAll('.links de');
+    const weddingDetails = document.getElementById('weddingDetails');
+    const contentImageDetails = document.getElementById('contentImageDetails'); // Get the image element
+
+    // Define the content and associated image source for each event
+    const eventData = {
+        'manley': {
+            content: `
+                <a href="https://www.manleywinelodge.co.za/">https://www.manleywinelodge.co.za/ </a>
+                <p>Contact Nadia Beutler: 081 5111 818 </p>
+            `,
+            imgSrc: '/static/pictures/manley_estate_2.jpg'
+        },
+        'rijks': {
+            content: `
+                <a href="https://rijks.co.za/"> https://rijks.co.za/ </a>
+                <p>Contact Heidi Truter: 023230 1622 </p>
+            `,
+            imgSrc: '/static/pictures/rijks_estate.jpg'
+        },
+        'villa': {
+            content: `
+                <a href="https://villatarentaal.co.za/"> https://villatarentaal.co.za/ </a>
+                <p>Contact Joanne: 082 330 4579 </p>
+            `,
+            imgSrc: '/static/pictures/villa_estate.jpg'
+        },
+        'mont': {
+            content: `
+                <a href="https://www.montrouge.co.za/"> https://www.montrouge.co.za/ </a>
+                <p>Contact Marisha: 072 461 2123 </p>
+            `,
+            imgSrc: '/static/pictures/mont_estate.jpg'
+        }
+    };
+
+    // Initialize with pre-wedding details and image
+    weddingDetails.innerHTML = eventData['manley'].content;
+    contentImageDetails.src = eventData['manley'].imgSrc;
+
+    dlinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const contentId = this.getAttribute('data-content');
+            weddingDetails.innerHTML = eventData[contentId].content;
+            contentImageDetails.src = eventData[contentId].imgSrc; // Update the image source based on the clicked link
         });
     });
 });

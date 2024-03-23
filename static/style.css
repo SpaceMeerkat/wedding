@@ -265,8 +265,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .container {
     display: flex;
     width: 80%;
-    padding-bottom: 5vh;
-    padding-top: 10vh;
+    padding-bottom: 15vh;
+    padding-top: 0vh;
 }
 
 .links {
@@ -274,7 +274,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     justify-content: center; /* Centers children horizontally, if needed */
     flex: 1;
     padding-left: 10vw;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .links ul {
@@ -284,8 +284,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .links li {
+    display: block; /* or use 'list-item' if you prefer */
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 5vh;
+}
+
+.links de {
+    display: block; /* or use 'list-item' if you prefer */
+    cursor: pointer;
+    margin-bottom: 5vh;
 }
 
 .content {
@@ -321,3 +328,44 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     object-fit: cover; /* Cover the area of the container, cropping the image if necessary */
 }
 
+.extra-info-div {
+  text-align: center;
+  /* Adjust the line-height for spacing between lines */
+  line-height: 5vh;
+  /* Add some padding for better presentation */
+  padding: 2vh;
+}
+
+.shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Example shadow */
+  /* Ensure the wrapper fits the size of the background image */
+  display: inline-block;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 10vh;
+}
+
+.parisienne-large {
+  font-family: "Parisienne", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 10vh;
+}
+
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vh;
+}
+
+.tangerine-small {
+  font-family: "Parisienne", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3vh;
+}
