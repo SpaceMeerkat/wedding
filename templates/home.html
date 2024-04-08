@@ -42,9 +42,27 @@ p {line-height: 2}
 
 <!-- Header / Countdown -->
 
-<div class="w3-container w3-center w3-white">
+<div class="w3-container w3-center w3-autumn-light">
     <h1 id="countdown" class="w3-xxlarge"></h1>
 </div>
+
+<!-- Navbar (sticky top) -->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="w3-hover-text-amber" href="#home" onclick="closeNav()">Home</a>
+  <a class="w3-hover-text-amber" href="#us" onclick="closeNav()">Our Story</a>
+  <a class="w3-hover-text-amber" href="#wedding" onclick="closeNav()">Wedding Details</a>
+  <a class="w3-hover-text-amber" href="#rsvp" onclick="closeNav()">RSVP</a>
+  <a class="w3-hover-text-amber" href="#accommodation" onclick="closeNav()">Accommodation</a>
+  <a class="w3-hover-text-amber" href="#information" onclick="closeNav()">Other Information</a>
+  <a class="w3-hover-text-amber" href="#team" onclick="closeNav()">Meet The Team</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+
+<button class="fixed-button parisienne-regular" style="font-size:2vh" onclick="openNav()">&#9776; Menu</button>
+
 
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
@@ -55,53 +73,117 @@ p {line-height: 2}
   </div>
 </header>
 
-<!-- Navbar (sticky bottom) -->
-<div class="w3-bottom w3-hide-small">
-  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-    <a href="#home" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Home</a>
-    <a href="#us" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Our Story</a>
-    <a href="#wedding" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Wedding Details</a>
-    <a href="#rsvp" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">RSVP</a>
-    <a href="#accommodation" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Accommodation</a>
-    <a href="#information" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Other Information</a>
-    <a href="#team" style="width:14.285%" class="w3-bar-item w3-button w3-hover-amber">Meet The Team</a>
-  </div>
-</div>
+<div class="w3-autumn-light">
 
-<div class="w3-content" style="max-width:1587px; position: relative;">
+<div class="w3-content" style="max-width:1587px; position: relative;" id="us">
 
     <!-- About / Jane And John -->
-    <div class="w3-container w3-padding-64 w3-white animate slide-right" id="us">
+    <div class="w3-container w3-padding-64 w3-autumn-light animate slide-right">
       <div class="w3-content">
-        <h1 class="w3-center parisienne-regular" style="padding-bottom:5vh"><b>Our Story</b></h1>
-        <img class=" center" src="/static/pictures/our_story.jpg" style="width:60%;">
-        <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</i>
+        <h1 class="w3-center parisienne-regular w3-text-black" style="padding-bottom:5vh"><b>Our Story</b></h1>
+        <img class=" center" src="/static/pictures/our_story.jpg" style="width:60%; padding-bottom:2vw">
+        <p class="w3-text-black"><b>
+           How did you meet?
+        </b></p><br>
+        <p class="w3-text-black">
+            We met on Clifton 4th beach one Friday afternoon during one of the regular frisbee socials. It was Melissa’s first time attending a Frisbee event. Daylan spotted her walking with a friend from across the beach, and a flame was ignited. In an attempt to get her attention, he threw a frisbee right at her. Although she was oblivious to his valiant attempt, Daylan remained persistent. After the Frisbee the group moved to a nearby restaurant to get some dinner. Daylan strategically planted himself at the end of the table next to where Melissa was sitting. It wasn’t long until they found themselves engrossed in conversation with each other the whole evening . There may as well have been no one else at the table. Numbers were exchanged, and the rest was history. 
         </p><br>
+        
+        <p class="w3-text-black"><b>
+           Where did you grow up? 
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan was born at Constantiaberg Hospital and grew up in Cape Town his entire life.  He has lived in several places, from Simon’s Town, to Noordhoek, and even Southampton in the UK. He now happily resides on Sorrento Farm in Dassenberg. Melissa was born in Pretoria, and grew up in Centurion. She did her community service in Nelspruit, Mpumalanga, after which getting an amazing opportunity to live and work in Cape Town in 2020. Now she will move to her forever home on Sorrento Farm with Daylan. The city girl will soon become a real plaas meisie.
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           Describe your most special memory or adventure together.
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan: Wow, it's not possible to choose one memory. It's been one long and growing adventure full of special memories  together. Our first real adventure was renting bikes and riding the promenade together where I first noticed how giddy and goofy we could be with each other. After that we got some ice-cream in seapoint which is still our favourite little place to get a sweet treat. 
+            <br><br>
+            Melissa: We went to a dear friend’s wedding in Keimoes, Northern Cape. We were trusting google maps to get us there safely, but about five hours in to the road trip,  we ended up on a dirt road for almost two hours! It was an unrelenting, treacherous, never-ending, abandoned stretch of nothingness. Buuuut… it was also so stunningly beautiful and the landscapes around us were breathtaking. Once we overcame our fears and irritations, and embraced the moment, it was truly a wonderful adventure with Daylan. Even though the road was scary, bumpy and hot, the conversations that were had in the car and the beautiful views we saw, will definitely stay in my heart forever.
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           Describe your partners best traits.
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan: One of Melissa's best traits is her ability to find the positive in any negative situation and uplift an atmosphere. Melissa has a personality that brings out the best in whoever she encounters, she always wants to see the best for her loved one’s, and has the most positive uplifting type of love I have ever experienced. She is always loyal to her word and has an above and beyond way of serving others. I love watching her inquisitive mind working at solving a problem whether someone else's problem or hers. She has a go getter way of approach to new seasons and loves bringing positive change into any environment.
+            <br><br>
+            Melissa: Daylan is extremely patient, gentle and kind. He is a man of integrity and cannot tell a lie, not even a small one. He is a very present and emotionally mature partner. He always wants to know how he can support me or what he can do to meet my needs or make life better for me, even in the smallest of ways. He is reliable and always does what he says he will do, and he is very determined once he has decided on something. He listens well and genuinely cares for those around him. He also has a very cute and goofy personality that makes me smile everyday. He is amazingly talented in so many ways, I am constantly learning about new things he can do or surprised by how innovative and creative his mind can be.  
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           Describe your partners more ummm.. quirky traits ;)
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan: Melisse has what I like to call "a closure" problem. From peanut butter lid, draws, tomato sauce lid, fridge door to even toothpaste cap she just can’t close it.  (Please I need to understand this.) She also will drive past 5 parking spots before parking in a parking that’s least convenient, almost like when a dog spins around 3 times before actually laying down. She has this specific smile and little clap she does only when she is very very happy. This is actually extremely cute lol. 
+            <br><br>
+            Melissa: Daylan is extremely pedantic about the way that things are arranged in his house and where things belong. I’ve had to learn to put something back EXACTLY the way I found it after using it, to the exact millimetre (lol). Daylan eats extremely slowly and I’m always left at the dining table staring at him because I’ve finished all my food by the time he starts eating (I like my food hot and he likes his food three days old..hehehe). However, if it's a packet of sweets or a chocolate bar, he eats the whole thing in one bite, so I have to act quicky if I plan on sharing any of that with him! Iv’e also realised that Daylan is prone to injury, accidents and the man flu. Iv’e had to nurse him several times during the course of our relationship, and I must say that he can be quite a difficult patient... ;P
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           What hobbies do you enjoy together?
+        </b></p><br>
+        <p class="w3-text-black">
+            We enjoy being active and have developed a nice routine of going to the gym together a few days a week. On the weekends however, you will find us trying out different ice cream parlours and grabbing a New York Slice, yum!  We enjoy going on bike rides together and we often take a cruise to find a new scenic lunch spot. We love the beach but we hate the sand lol. We often go for walks on the beach, but we would definitely rather swim in a pool. Other than this, we are just enjoying all the little things that life has to offer together.  
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           How did you know she is the one? 
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan: I first started thinking she was the one when I noticed I could be fully myself no matter how goofy or silly I was, she just loved me more for it. I also found no fault with who she was because I could love her 100% so naturally for who she was. I knew 100% that she was the one when I could see how we handled each and every situation we crossed and only wanted the best for each other and to uplift each other and grow together.
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           How did you know he is the one? 
+        </b></p><br>
+        <p class="w3-text-black">
+            Melissa: There is not one specific thing or moment where I knew Daylan was the one. What I do know is that I prayed long and hard for a partner like Daylan. When he entered my life, I felt a deep sense of knowing within me that he would be playing a significant part of my life and that he was here to stay. I felt the peace of the Lord with him from our very first date, up until now. 
+        </p><br>
+        
+        <p class="w3-text-black"><b>
+           What do you look forwards to the most in marriage? 
+        </b></p><br>
+        <p class="w3-text-black">
+            Daylan:  I look forwards to having my best friend come home to me every day and to make food together and do life together. It’s about the simple things for me. I look forward to going on adventures with my best friend. I look forwards to experiencing new chapters of life like having kids and building a big, beautiful home together
+            <br><br>
+            Melissa: I look forward to building our home up and decorating it with Daylan. I look forward to having a chilled and stable home life. It is from this place of love and stability where a person can truly flourish and become the best version of themselves. I definitely look forward to planning our overseas trip very soon, we’ve been talking about this since we started dating. The thing I look forward to the most is having my partner in crime there by my side all the time. When I have a good day, he will be there to share the joy with, and when I have a bad day, he will still there to confide in.
+        </p><br>
+        
+        
+        
         <p class="w3-center"><a href="#wedding" class="w3-button w3-amber w3-round w3-padding-large w3-large">Wedding Details</a></p>
       </div>
     </div>
 
 </div>
-
-
-<!-- Background photo -->
-<div class="w3-container bgimg5 animate slide-left">
 </div>
 
 
-<!-- Wedding information -->
-<div class="w3-content animate slide-right" style="max-width:1587px; position: relative;" id="wedding">
+<!-- Background photo -->
 
-    <h1 class="w3-center parisienne-regular" style="padding-top:15vh; padding-bottom:5vh"><b>Wedding Details</b></h1>
+<div class="w3-container w3-autumn-blue-light bgimg5 animate slide-left"></div>
+
+
+<!-- Wedding information -->
+
+<div class="w3-autumn-light", style="padding-top:1vw">
+
+<div class="w3-content w3-autumn-light" style="max-width:1587px; position: relative;" id="wedding">
+
+<div class="animate slide-right">
+
+    <h1 class="w3-center parisienne-regular w3-text-black" style="padding-top:5vw; padding-bottom:2vw"><b>Wedding Details</b></h1>
 
     <div class="container" style="padding-bottom:5vh">
         <div class="links">
             <ul>
-                <li class='tangerine-regular' data-content="bigDay">The big day</li>
-                <li class='tangerine-regular' data-content="preWedding">The pre-wedding get-together</li>
-                <li class='tangerine-regular' data-content="goodbyes">Our goodbyes</li>
+                <li class='tangerine-regular w3-text-black' data-content="bigDay"> ~ The big day</li>
+                <li class='tangerine-regular w3-text-black' data-content="preWedding"> ~ The pre-wedding get-together</li>
+                <li class='tangerine-regular w3-text-black' data-content="goodbyes"> ~ Our goodbyes</li>
             </ul>
         </div>
         <div class="content">
@@ -113,35 +195,45 @@ p {line-height: 2}
             </div>
         </div>
     </div>
+    
 
-    <!-- RSVP section -->
-    <div class="w3-container w3-white w3-center w3-wide" style="padding-bottom:15vh" id="rsvp">
-      <h2 class='parisienne-regular' style='font-size:5vh'>Hope You Can Make It!</h2>
-      <p class="w3-large">Kindly Respond By ??, 2024</p>
-      <p class="w3-xlarge">
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-amber w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
-      </p>
-    </div>
+<!-- RSVP section -->
+<div class="w3-container w3-autumn-light w3-center w3-wide" id="rsvp">
+<div style="padding-bottom:15vw, padding-top:15vw">
+  <h2 class='parisienne-regular w3-text-black' style='font-size:5vh'>Hope You Can Make It!</h2>
+  <p class="w3-large w3-text-black">Kindly Respond By ??, 2024</p>
+  <p class="w3-xlarge w3-text-black">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-amber w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+  </p>
+</div>
+</div>
 
 </div>
+</div>
+</div>
+    
 
 <!-- Background photo -->
-<div class="w3-container bgimg6 animate slide-left">
-</div>
+<div class="w3-container w3-autumn-blue-light bgimg6 animate slide-left"></div>
 
 
 <!-- Accommodation -->
-<div class="w3-content animate slide-right" style="max-width:1587px; position: relative;" id="accommodation">
 
-    <h1 class="w3-center parisienne-regular" style="padding-top:15vh;"><b>Accommodation</b></h1>
+<div class="w3-autumn-light", style="padding-top:1vw">
+
+<div class="w3-content w3-autumn-light" style="max-width:1587px; position: relative;" id="accommodation">
+
+<div class="animate slide-right">
+
+    <h1 class="w3-center parisienne-regular w3-text-black" style="padding-top:15vh;"><b>Accommodation</b></h1>
 
     <div class="container">
         <div class="links">
             <ul>
-                <de class='tangerine-regular' data-content="manley">Manley Wine Estate</de>
-                <de class='tangerine-regular' data-content="rijks">Rijk’s Wine Estate & Hotel</de>
-                <de class='tangerine-regular' data-content="villa">Villa Tarentaal</de>
-                <de class='tangerine-regular' data-content="mont">Mont Rouge Farm</de>
+                <de class='tangerine-regular w3-text-black' data-content="manley"> ~ Manley Wine Estate </de>
+                <de class='tangerine-regular w3-text-black' data-content="rijks"> ~ Rijk’s Wine Estate & Hotel</de>
+                <de class='tangerine-regular w3-text-black' data-content="villa"> ~ Villa Tarentaal</de>
+                <de class='tangerine-regular w3-text-black' data-content="mont"> ~ Mont Rouge Farm</de>
             </ul>
         </div>
         <div class="content">
@@ -155,35 +247,45 @@ p {line-height: 2}
     </div>
     
 </div>
-
-<!-- Background photo -->
-<div class="w3-container bgimg7 animate slide-left">
+</div>
 </div>
 
-<div class="w3-content" style="max-width:1587px; position: relative;">
+
+<!-- Background photo -->
+
+<div class="w3-container w3-autumn-blue-light bgimg7 animate slide-left"> </div>
+
+
+<div class="w3-autumn-light">
+
+<div class="w3-content w3-autumn-light" style="max-width:1587px; position: relative;" id="information">
 
     <!-- OTHER INFORMATION -->
-    <div class="w3-container w3-padding-64 w3-white w3-grayscale-min w3-center animate slide-right" id="information">
+    <div class="w3-container w3-padding-64 w3-text-black w3-grayscale-min w3-center animate slide-right">
         <div class="w3-content">
-          <h1 class="parisienne-regular"><b>Other Information</b></h1>
+          <h1 class="parisienne-regular w3-text-black"><b>Other Information</b></h1>
         </div>
         <div class="extra-info-div">
             Cash bar<br>
             Dress code: Very much formal ;)<br>
             Children: Due to limited space, we kindly invite only our nieces and nephews along; other than this our reception will be a date night to enjoy!<br>
-            Gifts: Your presence at our wedding is the greatest gift of all. However, should you wish to bless us with a gift, a box and table will be available.
+            Gifts: Your presence at our wedding is the greatest gift of all. However, should you wish to bless us with a gift, a box and table will be available.<br>
+            A special thank you to Shaun and Marinda Myburgh for filming our lovely engagement video and for the beautiful photos seen on the invitation. 
         </div>
     </div>
-    
+
+</div>
 </div>
 
-<!-- The Bridal Party -->
-<div class="w3-container w3-padding-64 w3-white w3-grayscale-min w3-center animate slide-right" id="team">
-    <div class="w3-content">
+<!-- Meet the team -->
+<div class="w3-autumn-light" id="team">
+<div class="w3-container animate slide-left w3-autumn-light w3-padding-64 w3-text-black w3-center">
+    <div class="w3-content w3-text-black">
       <h1 class="parisienne-regular"><b>Meet The Team</b></h1>
     </div>
-    <h2>Here are some details..</h2>
+    <h2 class="w3-text-black">Here are some details..</h2>
     </div>
+</div>
 </div>
     
     
@@ -213,12 +315,28 @@ p {line-height: 2}
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
+<footer class="w3-center w3-white w3-padding-16">
   <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
 </footer>
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
 <!-- Add a script at the end of your HTML body -->
+
+<script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+} 
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -230,28 +348,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventData = {
         'preWedding': {
             content: `
-                <h3 class='tangerine-small' style='padding-bottom:3vh'>Please join us for a lovely spit-braai as we get to know each other the night before our big day. Let’s acquaint with each other and get the vibes going ;)</h3>
-                <p>When - Friday 04 October 18:00</p>
-                <p>Location - Manley Estate lapa and pool area</p>
-                <p>What to bring - Own drinks (No cash bar on site)</p>
+                <h3 class='tangerine-small w3-text-black'>Please join us for a lovely spit-braai as we get to know each other the night before our big day. Let’s acquaint with each other and get the vibes going ;)</h3>
+                <p class='w3-text-black'>When - Friday 04 October 18:00</p>
+                <p class='w3-text-black'>Location - Manley Estate lapa and pool area</p>
+                <p class='w3-text-black'>What to bring - Own drinks (No cash bar on site)</p>
             `,
             imgSrc: '/static/pictures/tester.jpg'
         },
         'goodbyes': {
             content: `
-                <h3 class='tangerine-small' style='padding-bottom:3vh'>You are invited to join us for our first breakfast as the Myburghs!</h3>
-                <a href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate Restaurant</a>
-                <p>Time - 09:30</p>
-                <p style='font-size:1.5vh'>Note: breakfast is included for guests staying at Manley Estate. For guests staying elsewhere, breakfast is R190 per person.</p>
+                <h3 class='tangerine-small w3-text-black'>You are invited to join us for our first breakfast as the Myburghs!</h3>
+                <a class='w3-text-black' href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate Restaurant</a>
+                <p class='w3-text-black'>Time - 09:30</p>
+                <p class='w3-text-black' style='font-size:1.5vh'>Note: breakfast is included for guests staying at Manley Estate. For guests staying elsewhere, breakfast is R190 per person.</p>
             `,
             imgSrc: '/static/pictures/faces.jpg'
         },
         'bigDay': {
             content: `
-                <a href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate, Tulbagh</a>
-                <p>When - 14:30 for a 15:00 Start</p>
+                <a class='w3-text-black' href='https://www.google.com/maps/place/Manley+Wine+Estate+%28Pty%29+Ltd./data=!4m10!3m9!1s0x1dcd3f2942e4e43f:0xf407201fd91f7c62!5m2!4m1!1i2!8m2!3d-33.2710173!4d19.1453836!16s%2Fg%2F1x6n4kh7!19sChIJP-TkQik_zR0RYnwf2R8gB_Q?authuser=0&hl=en&rclk=1'> Venue - Manley Wine Estate, Tulbagh</a>
+                <p class='w3-text-black'>When - 14:30 for a 15:00 Start</p>
             `,
-            imgSrc: '/static/pictures/manley_estate.jpg' // Assume you have a big day image
+            imgSrc: '/static/pictures/the_wedding_day.jpg' // Assume you have a big day image
         }
     };
 
@@ -280,29 +398,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventData = {
         'manley': {
             content: `
-                <a href="https://www.manleywinelodge.co.za/">https://www.manleywinelodge.co.za/ </a>
-                <p>Contact Nadia Beutler: 081 5111 818 </p>
+                <a class="w3-text-black" href="https://www.manleywinelodge.co.za/">https://www.manleywinelodge.co.za/ </a>
+                <p class="w3-text-black">Contact Nadia Beutler: 081 5111 818 </p>
             `,
             imgSrc: '/static/pictures/manley_estate_2.jpg'
         },
         'rijks': {
             content: `
-                <a href="https://rijks.co.za/"> https://rijks.co.za/ </a>
-                <p>Contact Heidi Truter: 023230 1622 </p>
+                <a class="w3-text-black" href="https://rijks.co.za/"> https://rijks.co.za/ </a>
+                <p class="w3-text-black">Contact Heidi Truter: 023230 1622 </p>
             `,
             imgSrc: '/static/pictures/rijks_estate.jpg'
         },
         'villa': {
             content: `
-                <a href="https://villatarentaal.co.za/"> https://villatarentaal.co.za/ </a>
-                <p>Contact Joanne: 082 330 4579 </p>
+                <a class="w3-text-black" href="https://villatarentaal.co.za/"> https://villatarentaal.co.za/ </a>
+                <p class="w3-text-black">Contact Joanne: 082 330 4579 </p>
             `,
             imgSrc: '/static/pictures/villa_estate.jpg'
         },
         'mont': {
             content: `
-                <a href="https://www.montrouge.co.za/"> https://www.montrouge.co.za/ </a>
-                <p>Contact Marisha: 072 461 2123 </p>
+                <a class="w3-text-black" href="https://www.montrouge.co.za/"> https://www.montrouge.co.za/ </a>
+                <p class="w3-text-black">Contact Marisha: 072 461 2123 </p>
             `,
             imgSrc: '/static/pictures/mont_estate.jpg'
         }
@@ -397,8 +515,11 @@ function updateCountdown() {
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
     
     // Display the result in the element with id="countdown"
-    document.getElementById("countdown").innerHTML = days + " days " + hours + "h "
+    var countdownElement = document.getElementById("countdown");
+    countdownElement.innerHTML = days + " days " + hours + "h "
     + minutes + "m " + seconds + "s ";
+    countdownElement.className = "parisienne-regular w3-text-black";
+    countdownElement.style = "font-size:5vh";
     
     // If the countdown is finished, write some text
     if (difference < 0) {

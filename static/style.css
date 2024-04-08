@@ -236,6 +236,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
+.w3-autumn-dark,.w3-hover-autumn-dark:hover{color:#ffbf00!important;background-color:#ffbf00!important}
+.w3-autumn-light,.w3-hover-autumn-light:hover{color:#fcd493!important;background-color:#fcd493!important}
+.w3-autumn-blue-light,.w3-hover-autumn-blue-dark:hover{color:#a2d2df!important;background-color:#a2d2df!important}
+
 .center {
   display: block;
   margin-left: auto;
@@ -368,4 +372,64 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   font-weight: 700;
   font-style: normal;
   font-size: 3vh;
+}
+
+
+ /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #a2d2df; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 2vh 2vh 0.5vw 0.5vw;
+  text-decoration: none;
+  font-size: 2.5vh;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.fixed-button {
+    position: fixed; /* Stay in place during scroll */
+    top: 3vh; /* 5% from the top of the viewport */
+    right: 2vw; /* 5% from the right of the viewport */
+    z-index: 9999; /* Stay above all other content */
 }
