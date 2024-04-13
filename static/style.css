@@ -394,10 +394,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   font-size: 2rem;
 } 
 
- /* The side navigation menu */
+/* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 25vw; /* 0 width - change this with JavaScript */
+  width: 0; /* Initially 0 width */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
@@ -412,7 +412,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .sidenav a {
   padding: 2vh 2vh 0.5vw 2vw;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 2vw; 
   color: white;
   display: block;
   transition: 0.2s;
@@ -431,7 +431,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   font-size: 36px;
   margin-left: 50px;
 }
-
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

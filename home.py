@@ -7,31 +7,39 @@ Created on Sat Jan 20 16:52:45 2024
 
 from flask import (Blueprint, flash, g, redirect, render_template, request,
                    session, url_for, make_response, jsonify)
-from os import listdir
+import time 
+import pickle
+import os
 
 bp = Blueprint('home', __name__, url_prefix='/')
 
 @bp.route("/", methods=None)
-def home_landing():
-    # cards_path = "/home/jdawson/repos/sharkweb/static/cards/"
-    # #shark_cards = ["cards/"+f for f in listdir(cards_path)]
-    # shark_cards = listdir(cards_path)
-    # print(shark_cards)
-    # #shark_card_names = [shark_cards[k].split("/")[1].split(".")[0] for k in range(len((shark_cards)))]
-    # shark_card_names = [shark_cards[k].split(".")[0] for k in range(len((shark_cards)))]
-    # #shark_card_urls = [url_for("static", filename=i) for i in shark_cards]
-    # shark_card_urls = shark_cards
-    # shark_card_status = ["unobserved"] * len(shark_card_names)
-    
-    # shark_cards_dict = {"names":shark_card_names,
-    #                     "urls":shark_card_urls,
-    #                     "status":shark_card_status,
-    #                     "species":[],
-    #                     "location":[],
-    #                     "operator":[],
-    #                     "depth":[],
-    #                     "about":[]}
-    
+def home_landing():    
     return render_template('home.html')
 
+def compileGuests():
+    print("triggered!!")
+    return
 
+@bp.route('/submit-rsvp', methods=['POST'])
+def submit_rsvp():
+    name = request.form['name']
+    dietary_requirements = request.form['dietaryRequirements']
+    song_requests = request.form['songRequests']
+    response = request.form['response']  # 'going' or 'not going'
+    responseDict = {'name':name,
+                    'response':response,
+                    'dietary_requirements':dietary_requirements,
+                    'song_requests':song_requests}
+    unique_id = str(int(time.time()))
+    
+    if name == 'UNIQUEKEY':
+        compileGuests()
+        return jsonify({'status': 'success', 'message': 'compiler request received'})
+        
+    with open('/home/jdawson/repos/weddingapp/static/rsvp/'+unique_id+'.pkl', 'wb') as file:
+        pickle.dump(responseDict, file)
+    
+    # Handle the data as needed, maybe save to a database, etc.
+    
+    return jsonify({'status': 'success', 'message': 'RSVP received'})
