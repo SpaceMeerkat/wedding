@@ -236,7 +236,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
-.w3-autumn-dark,.w3-hover-autumn-dark:hover{color:#ffbf00!important;background-color:#ffbf00!important}
+.w3-autumn-dark,.w3-hover-autumn-dark:hover{color:#fcd570!important;background-color:#fcd570!important}
 .w3-autumn-light,.w3-hover-autumn-light:hover{color:#fcd493!important;background-color:#fcd493!important}
 .w3-autumn-blue-light,.w3-hover-autumn-blue-dark:hover{color:#a2d2df!important;background-color:#a2d2df!important}
 
@@ -372,7 +372,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   font-weight: 700;
   font-style: normal;
   font-size: 3vh;
-}
+} 
 
 
  /* The side navigation menu */
