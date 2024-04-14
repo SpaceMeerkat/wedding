@@ -239,10 +239,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .w3-autumn-dark,.w3-hover-autumn-dark:hover{color:black!important;background-color:#fcd570!important}
 .w3-autumn-light,.w3-hover-autumn-light:hover{color:black!important;background-color:#fcd493!important}
-.w3-autumn-blue-light,.w3-hover-autumn-blue-dark:hover{color:#a2d2df!important;background-color:#a2d2df!important}
+.w3-autumn-blue-light,.w3-hover-autumn-blue-dark:hover{color:#32acdb!important;background-color:#32acdb!important}
 .w3-text-autumn-dark,.w3-hover-text-autumn-dark:hover{color:#fcd570!important}
 
 .w3-border-autumn{border:0.2rem solid #fcd493!important}
+
+.w3-coral,.w3-hover-coral:hover{color:white!important;background-color:#ef6946!important}
+.w3-text-coral,.w3-hover-text-coral:hover{color:#ef6946!important}
  
 .title {
   color: grey;
@@ -287,8 +290,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     justify-content: center; /* Centers children horizontally, if needed */
     flex: 1;
     padding-left: 0%;
-    padding-top: 0vh;
-    max-width:40%;
+    padding-top: 2vh;
+    max-width:50%;
 }
 
 .links ul {
@@ -355,6 +358,14 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Example shadow */
   /* Ensure the wrapper fits the size of the background image */
   display: inline-block;
+}
+
+
+.cinzel-countdown {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .parisienne-nav {
@@ -430,7 +441,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
+  top: 0; 
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
@@ -502,15 +513,16 @@ div.sticky {
 }
 
 .w3-card-profile {
-    flex: 1 1 18%; /* Adjusts basis for 5 cards on larger screens */
+    flex: 1 1 25%; /* Adjusts basis for 5 cards on larger screens */
     margin: 10px;
-    max-width: 40%;
+    max-width: 30%;
     border:0.2rem solid #fcd493!important
+    background-color:white;
 }
 
 @media (max-width: 768px) {
     .w3-card-profile {
-        flex: 1 1 40%; /* Adjusts basis for 2 cards on smaller screens */
+        flex: 1 1 25%; /* Adjusts basis for 2 cards on smaller screens */
     }
 }
 
