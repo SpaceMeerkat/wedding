@@ -243,7 +243,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-text-autumn-dark,.w3-hover-text-autumn-dark:hover{color:#fcd570!important}
 
 .w3-border-autumn{border:0.2rem solid #fcd493!important}
-
+ 
+.title {
+  color: grey;
+  font-size: 18px;
+}
 
 .center {
   display: block;
@@ -490,6 +494,24 @@ div.sticky {
     }
 }
 
+
+.w3-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.w3-card-profile {
+    flex: 1 1 18%; /* Adjusts basis for 5 cards on larger screens */
+    margin: 10px;
+    max-width: 40%;
+}
+
+@media (max-width: 768px) {
+    .w3-card-profile {
+        flex: 1 1 40%; /* Adjusts basis for 2 cards on smaller screens */
+    }
+}
 
 
 

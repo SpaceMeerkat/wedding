@@ -10,6 +10,7 @@ from flask import (Blueprint, flash, g, redirect, render_template, request,
 import time 
 import pickle
 import os
+import csv
 
 bp = Blueprint('home', __name__, url_prefix='/')
 
@@ -18,8 +19,29 @@ def home_landing():
     return render_template('home.html')
 
 def compileGuests():
-    print("triggered!!")
+    directory = '/home/jdawson/repos/weddingapp/static/rsvp/'
+    all_guests_file = '/home/jdawson/repos/weddingapp/static/rsvp/admin/allGuests.csv'
+    data_list = []
+
+    # Read all pickle files and collect data
+    for filename in os.listdir(directory):
+        if filename.endswith('.pkl'):
+            filepath = os.path.join(directory, filename)
+            with open(filepath, 'rb') as file:
+                data = pickle.load(file)
+                data_list.append(data)
+
+    # Write data to CSV
+    with open(all_guests_file, 'w', newline='') as csvfile:
+        fieldnames = ['name', 'response', 'dietary_requirements', 'song_requests']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for data in data_list:
+            writer.writerow(data)
+
     return
+
 
 @bp.route('/submit-rsvp', methods=['POST'])
 def submit_rsvp():
