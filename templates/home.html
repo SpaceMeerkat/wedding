@@ -22,8 +22,8 @@ p {line-height: 2}
 
 
 .bgimg5, .bgimg6, .bgimg7 {
-  min-height: 80vw;
-  max-height: 90vw;
+  min-height: 70vw;
+  max-height: 80vw;
   background-position: center;
   background-size: auto 100% ; 
   background-repeat: no-repeat;
@@ -41,12 +41,6 @@ p {line-height: 2}
 </head>
 <body>
 
-<!-- Header / Countdown -->
-
-<div class="w3-container w3-center w3-snow" id="home">
-    <h1 id="countdown" class="w3-xxlarge"></h1>
-</div>
-
 <!-- Navbar (sticky top) -->
 
 <div id="mySidenav" class="sidenav parisienne-nav">
@@ -54,7 +48,7 @@ p {line-height: 2}
   <a class="w3-hover-text-amber" href="#home" onclick="closeNav()">Home</a>
   <a class="w3-hover-text-amber" href="#us" onclick="closeNav()">Our Story</a>
   <a class="w3-hover-text-amber" href="#wedding" onclick="closeNav()">Wedding Details</a>
-  <a class="w3-hover-text-amber" href="#rsvp" onclick="closeNav()">RSVP</a>
+  <a class="w3-hover-text-amber" href="#wedding" onclick="closeNav()">RSVP</a>
   <a class="w3-hover-text-amber" href="#accommodation" onclick="closeNav()">Accommodation</a>
   <a class="w3-hover-text-amber" href="#information" onclick="closeNav()">Other Information</a>
   <a class="w3-hover-text-amber" href="#team" onclick="closeNav()">Meet The Team</a>
@@ -69,6 +63,12 @@ p {line-height: 2}
     <video autoplay muted loop controls>
         <source src="/static/pictures/wedding_video.mp4" type="video/mp4">
     </video>
+</div>
+
+<!-- Header / Countdown -->
+
+<div class="w3-container w3-center w3-snow" id="home">
+    <p id="countdown"/>
 </div>
 
 
@@ -174,9 +174,9 @@ p {line-height: 2}
 
 <!-- Wedding information -->
 
-<div class="w3-snow", style="padding-top:1vw; padding-bottom:2vw">
+<div class="w3-snow", style="padding-top:5vw; padding-bottom:5vw" id="wedding">
 
-<div class="w3-content w3-snow w3-border-autumn animate slide-right" style="max-width:1587px; position: relative; padding-bottom:2vw; padding-left:2vw; padding-right:2vw" id="wedding">
+<div class="w3-content w3-snow w3-border-autumn animate slide-right" style="max-width:1587px; position: relative; padding-bottom:2vw; padding-left:2vw; padding-right:2vw">
 
 <div>
 
@@ -207,7 +207,7 @@ p {line-height: 2}
   <h2 class='parisienne-regular w3-text-amber' style='font-size:5vh'>Hope You Can Make It!</h2>
   <p class="w3-large w3-text-autumn-dark">Kindly Respond By ??, 2024</p>
   <p class="w3-xlarge w3-text-autumn-dark">
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-autumn-dark w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-autumn-light w3-hover-opacity-off" style="padding:8px 60px;">RSVP</button>
   </p>
 </div>
 
@@ -228,11 +228,11 @@ p {line-height: 2}
 
 <!-- Accommodation -->
 
-<div class="w3-snow" style="padding-top:1vw; padding-bottom:5vw">
+<div class="w3-snow" style="padding-top:5vw; padding-bottom:5vw" id="accommodation">
 
-<div class="w3-content w3-snow w3-border-autumn" style="max-width:1587px; position: relative; padding-bottom:5vw" id="accommodation">
+<div class="w3-content w3-snow w3-border-autumn animate slide-right" style="max-width:1587px; position: relative; padding-bottom:5vw">
 
-<div class="animate slide-right">
+<div class="w3-snow">
 
     <h1 class="w3-center parisienne-regular w3-text-amber" style="padding-top:5vw; padding-bottom:5vw;"><b>Accommodation</b></h1>
 
@@ -294,7 +294,7 @@ p {line-height: 2}
 
 <!-- Meet the team -->
 <div class="w3-snow" id="team">
-<div class="w3-container animate slide-left w3-snow w3-padding-64 w3-text-black w3-center">
+    <div class="w3-container animate slide-left w3-snow w3-padding-64 w3-text-black w3-center">
         <h1 class="parisienne-regular w3-text-amber" style="padding-top:5vw; padding-bottom:5vw;"><b>Meet The Team</b></h1>
         
         <h1 class="parisienne-regular w3-text-autumn-dark" style="padding-bottom:2vw;">Bride</h1>
@@ -304,69 +304,69 @@ p {line-height: 2}
                 <!-- Card 1 -->
                 <div class="w3-card-profile w3-margin card">
                     <img src="/static/pictures/bride/shelley_danny.png" alt="shelley_danny" style="width:100%">
-                    <h3>Mother and father of the bride</h3>
+                    <h3 class='tangerine-regular w3-text-autumn-dark'>Mother and father of the bride</h3>
                     <p>Introducing Shelley and Danny White. Who loved, sheltered and raised Melissa since 1996 to grow to be the person she is today...</p>
                 </div>
                 
                 <div class="w3-card-profile w3-margin card">
                     <img src="/static/pictures/bride/natasha.png" alt="natasha" style="width:100%">
-                    <h3>Natasha</h3>
+                    <h3 class='tangerine-regular w3-text-autumn-dark'>Natasha</h3>
                     <p>Our friendship was established in 2010 at our Grade eight orientation camp. A kind and extremely curly-haired girl sat next to me while the prefects were plotting their tricks and schemes to unleash onto us. Our friendship was instant and high school became a blast since then with her by my side. </p>
                 </div>
                 
                 <div class="w3-card-profile w3-margin card">
                     <img src="/static/pictures/bride/cassie.png" alt="cassie" style="width:100%">
-                    <h3>Cassie</h3>
+                    <h3 class='tangerine-regular w3-text-autumn-dark'>Cassie</h3>
                     <p>My longest friendship is with her, going all the back to Grade 3. We have done several family vacations together, many sleepovers, holidays, primary school shenanigans, highschool shenanigans deluxe and now as an adult she remains the sweetest friend to have.  </p>
                 </div>
                 
                 <div class="w3-card-profile w3-margin card">
                     <img src="/static/pictures/bride/courtney.png" alt="courtney" style="width:100%">
-                    <h3>Courtney</h3>
+                    <h3 class='tangerine-regular w3-text-autumn-dark'>Courtney</h3>
                     <p>The newest friendship of the lot but she certainly packs a punch. I met her the same night I met Daylan, and she has been our biggest fan since then. Courtney snuck into my heart almost as fast as Daylan did, with her contagious loud laugh and heart of gold. </p>
                 </div>
                 
                 <div class="w3-card-profile w3-margin card">
                     <img src="/static/pictures/bride/lani.png" alt="lani" style="width:100%">
-                    <h3>Lani</h3>
+                    <h3 class='tangerine-regular w3-text-autumn-dark'>Lani</h3>
                     <p>Our friendship was established in 2018. I started attending classes at her Crossfit gym and we didn’t take very long to become best of friends, many people even confused us as being sisters. She has always inspired me and encouraged me to be the best version of me. </p>
                 </div>
                 
             </div>
             
-            <h1 class="parisienne-regular w3-text-autumn-dark" style="padding-bottom:2vw;">Groom</h1>
+            <h1 class="parisienne-regular w3-text-autumn-dark" style="padding-top:5vw; padding-bottom:2vw;">Groom</h1>
         
                 <div class="w3-row" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
                 
                     <!-- Card 1 -->
                     <div class="w3-card-profile w3-margin card">
-                        <img src="/static/pictures/bride/shelley_danny.png" alt="shelley_danny" style="width:100%">
-                        <h3>Mother and father of the bride</h3>
+                        <img src="/static/pictures/groom/marianne_henning.png" alt="marianne_henning" style="width:100%">
+                        <h3 class='tangerine-regular w3-text-autumn-dark'>Mother and father of the groom</h3>
                         <p>Introducing Shelley and Danny White. Who loved, sheltered and raised Melissa since 1996 to grow to be the person she is today...</p>
                     </div>
                     
                     <div class="w3-card-profile w3-margin card">
-                        <img src="/static/pictures/bride/natasha.png" alt="natasha" style="width:100%">
-                        <h3>Natasha</h3>
-                        <p>Our friendship was established in 2010 at our Grade eight orientation camp. A kind and extremely curly-haired girl sat next to me while the prefects were plotting their tricks and schemes to unleash onto us. Our friendship was instant and high school became a blast since then with her by my side. </p>
+                        <img src="/static/pictures/groom/clinton.png" alt="clinton" style="width:100%">
+                        <h3 class='tangerine-regular w3-text-autumn-dark'>Clinton</h3>
+                        <p>Best Man, Master of Ceremonies, and Daylan’s only brother. He has always been very protective over Daylan and they used to have play fights that got a bit rough sometimes even drawing blood lol, they now see each other for braais or social and share a "hey how you" over the phone often.</p>
                     </div>
                     
                     <div class="w3-card-profile w3-margin card">
-                        <img src="/static/pictures/bride/cassie.png" alt="cassie" style="width:100%">
-                        <h3>Cassie</h3>
-                        <p>My longest friendship is with her, going all the back to Grade 3. We have done several family vacations together, many sleepovers, holidays, primary school shenanigans, highschool shenanigans deluxe and now as an adult she remains the sweetest friend to have.  </p>
+                        <img src="/static/pictures/groom/waldo.png" alt="waldo" style="width:100%">
+                        <h3 class='tangerine-regular w3-text-autumn-dark'>Waldo</h3>
+                        <p>They first met at a joint church group back in 2008 and shared the odd chat here and there. After Daylan returned to SA he joined the group Waldo had started himself called ‘Young Adults’. This is where Waldo was one of the closest witnesses to the growth Daylan had in his relationship with the Lord, becoming who he is today.</p>
                     </div>
                     
                     <div class="w3-card-profile w3-margin card">
-                        <img src="/static/pictures/bride/courtney.png" alt="courtney" style="width:100%">
-                        <h3>Courtney</h3>
-                        <p>The newest friendship of the lot but she certainly packs a punch. I met her the same night I met Daylan, and she has been our biggest fan since then. Courtney snuck into my heart almost as fast as Daylan did, with her contagious loud laugh and heart of gold. </p>
+                        <img src="/static/pictures/groom/dillion.png" alt="dillion" style="width:100%">
+                        <h3 class='tangerine-regular w3-text-autumn-dark'>Dillion</h3>
+                        <p>Dillion and Daylan have only been close the later 10yrs of their lives. Although they are cousins, they share a brotherly relationship chatting about deep stuff and always looking for something fun to do.</p>
                     </div>
                     
                     <div class="w3-card-profile w3-margin card">
-                        <img src="/static/pictures/bride/lani.png" alt="lani" style="width:100%">
-                        <h3>Lani</h3>
-                        <p>Our friendship was established in 2018. I started attending classes at her Crossfit gym and we didn’t take very long to become best of friends, many people even confused us as being sisters. She has always inspired me and encouraged me to be the best version of me. </p>
+                        <img src="/static/pictures/groom/yushi.png" alt="yushi" style="width:100%">
+                        <h3 class='tangerine-regular w3-text-autumn-dark'>Yushi</h3>
+                        <p>Yushi and Daylan met through a mutual friend and shared socials together, they then lost contact for a while and then randomly bumped into each other again in another friend circle. Yushi has since been a close friend and a wing man always on the look out to find each other a Christian wifey (lol) and encourage each other in the faith.</p>
                     </div>
                     
                 </div>
@@ -399,13 +399,6 @@ p {line-height: 2}
     </div>
   </div>
 </div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-white w3-padding-16">
-  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
-</footer>
-<div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
 <!-- Add a script at the end of your HTML body -->
 
@@ -590,9 +583,9 @@ function updateCountdown() {
     // Display the result in the element with id="countdown"
     var countdownElement = document.getElementById("countdown");
     countdownElement.innerHTML = days + " days " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    + minutes + "m " + seconds + "s " + "   ... to go";
     countdownElement.className = "parisienne-regular w3-text-black";
-    countdownElement.style = "font-size:5vh";
+    countdownElement.style = "font-size:4rem";
     
     // If the countdown is finished, write some text
     if (difference < 0) {
