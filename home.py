@@ -30,8 +30,6 @@ def compileGuests():
             with open(filepath, 'rb') as file:
                 data = pickle.load(file)
                 data_list.append(data)
-                
-    print("DATA: ", data_list)
 
     # Write data to CSV
     with open(all_guests_file, 'w', newline='') as csvfile:
