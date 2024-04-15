@@ -401,7 +401,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   font-family: "Parisienne", cursive;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 3vh;
+  line-height: 90%;
 } 
 
 .tangerine-small-small {
@@ -526,7 +527,7 @@ div.sticky {
 @media (max-width: 768px) {
     .w3-card-profile {
         flex: 1 1 25%; /* Adjusts basis for 2 cards on smaller screens */
-        line-height: 40%;
+        line-height: 60%;
         margin: 1vw;
         max-width: 45%;
     }
@@ -569,7 +570,7 @@ p2 {
         margin: 20% auto; /* Increase top margin to accommodate smaller screens */
         padding: 5%; /* Padding remains the same, relative to viewport width */
     }
-}
+} 
 
 html, body {
     width: 100%;
